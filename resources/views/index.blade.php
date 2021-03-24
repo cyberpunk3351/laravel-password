@@ -12,8 +12,12 @@
                         <h3>{{ $user->name }} role: {{ $user->title }}</h3>
 
                     @endforeach --}}
-                    <h3>{{ $rolename }}</h3>
-                    <h3>{{ $user }}</h3>
+                    <h1>Имя: {{ $user }}</h1>
+                    <p>Роль: {{ $rolename }}</p>
+                    {{-- {{dd($password)}} --}}
+                    @foreach ($password as $pass)
+                        <p>Пароль: {{ $pass->pass }} | Категория: {{ $pass->title }}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
