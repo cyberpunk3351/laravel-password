@@ -6,17 +6,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
+                
                 <div class="card-body">
-                    {{-- @foreach ($users as $user)
-                        <h3>{{ $user->name }} role: {{ $user->title }}</h3>
-
-                    @endforeach --}}
+                    
                     <h1>Имя: {{ $user }}</h1>
                     <p>Роль: {{ $rolename }}</p>
+                    <a class="btn btn-outline-primary" href="{{ route('create') }}" role="button">Создать</a>
                     {{-- {{dd($password)}} --}}
                     @foreach ($password as $pass)
-                        <p>Пароль: {{ $pass->pass }} | Категория: {{ $pass->title }}</p>
+                        <p class="mt-3">Пароль: {{ $pass->pass }} | Категория: {{ $pass->title }}</p>
                     @endforeach
                 </div>
             </div>

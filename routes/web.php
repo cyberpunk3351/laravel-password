@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\MainController::class, 'log'])->name('home');
+Route::get('pass/create', [App\Http\Controllers\MainController::class, 'create'])->name('create');
+Route::post('pass/store', [App\Http\Controllers\MainController::class, 'store'])->name('store');
 
 Auth::routes();
 
