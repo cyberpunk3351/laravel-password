@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Auth;
@@ -16,8 +17,12 @@ class MainController extends Controller
      */
     public function index(Request $request)
     {
-        $users = Auth::user()->name;
+        $id = Auth::user()->id;
+        $currentuser = User::find($id);
+        $user = $currentuser->name;
+        $role = Role::find($id);
+        $rolename = $role->title;
 
-        return view('index', compact('users'));
+        return view('index', compact('rolename', 'user'));
     }
 }

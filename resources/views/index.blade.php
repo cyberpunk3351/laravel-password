@@ -12,7 +12,8 @@
                         <h3>{{ $user->name }} role: {{ $user->title }}</h3>
 
                     @endforeach --}}
-                    <h3>{{ $users }}</h3>
+                    <h3>{{ $rolename }}</h3>
+                    <h3>{{ $user }}</h3>
                 </div>
             </div>
         </div>
